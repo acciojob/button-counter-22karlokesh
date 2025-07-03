@@ -18,20 +18,20 @@ import React from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const ButtonCounter = () => {
   const [count, setCount] = useState(0);
-
-  // Function to handle button click
-  const handleClick = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Button Counter</h2>
-      <p>Button clicked {count} times</p>
-      <button onClick={handleClick}>Click me</button>
+    <div>
+        <p>Button clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+   return (
+    <div>
+      {/* Do not remove the main div */}
+      <ButtonCounter />
     </div>
   );
 };
 
-export default ButtonCounter;
+export default App;
